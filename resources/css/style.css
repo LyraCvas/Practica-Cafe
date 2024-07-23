@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+      scroll-behavior: smooth;
+}
+
+:root{
+    /* CSS HEX */
+    --night: #0c120cff;
+    --amethyst: #8661c1ff;
+    --non-photo-blue: #98dfeaff;
+    --light-sea-green: #07beb8ff;
+    --russian-violet: #390040ff;
+}
+
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+    :root {
+          --fs-sm: clamp(0.81rem, 0.06cqi + 0.8rem, 0.84rem);
+          --fs-base: clamp(1rem, 0.22cqi + 0.95rem, 1.13rem);
+          --fs-md: clamp(1.23rem, 0.46cqi + 1.13rem, 1.5rem);
+          --fs-lg: clamp(1.52rem, 0.83cqi + 1.33rem, 2rem);
+          --fs-xl: clamp(1.88rem, 1.37cqi + 1.57rem, 2.66rem);
+          --fs-xxl: clamp(2.32rem, 2.15cqi + 1.83rem, 3.55rem);
+          --fs-xxxl: clamp(2.86rem, 3.27cqi + 2.12rem, 4.73rem);
+    }
+  }
+  /* For browsers that don't support clamp or container queries */
+  @supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+    :root {
+          --fs-sm: 0.81rem;
+          --fs-base: 1rem;
+          --fs-md: 1.23rem;
+          --fs-lg: 1.52rem;
+          --fs-xl: 1.88rem;
+          --fs-xxl: 2.32rem;
+          --fs-xxxl: 2.86rem;
+    }
+    @media screen and (min-width: 1280px) {
+      :root {
+              --fs-sm: 0.84rem;
+              --fs-base: 1.13rem;
+              --fs-md: 1.5rem;
+              --fs-lg: 2rem;
+              --fs-xl: 2.66rem;
+              --fs-xxl: 3.55rem;
+              --fs-xxxl: 4.73rem;
+      }
+    }
+  }
+
+body{
+    /* background-image: url(""); */
+    background-color: var(--night);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.p-10{
+    padding: 1% 0;
+}
+
+.g-10{
+    gap: 10px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.a-center{
+    align-items: center;
+}
+
+.j-center{
+    justify-content: center;
+}
+.j-between{
+    justify-content: space-between;
+}
+.flex-d-column{
+    flex-direction: column;
+}
+.mg-auto{
+    margin: 0 auto;
+}
+
+/* Fuentes */
+
+.ltrs-sm{
+    font-size: var(--fs-sm);
+}
+.ltrs-base{
+    font-size: var(--fs-base);
+}
+.ltrs-md{
+    font-size: var(--fs-md);
+}
+.ltrs-lg{
+    font-size: var(--fs-lg);
+}
+.ltrs-xl{
+    font-size: var(--fs-xl);
+}
+.ltrs-xxl{
+    font-size: var(--fs-xxl);
+}
+.ltrs-xxxl{
+    font-size: var(--fs-xxxl);
+}
+.ltrs-bld{
+    font-weight: bold;
+}
+.a{
+    text-decoration: none;
+}
+
+.a-btn{
+    border: var(--amethyst) 2.5px solid;
+    padding: .5% 5%;
+    border-radius: 50px;
+    color: var(--night);
+    font-weight: bold;
+    background-color: var(--light-sea-green);
+    transition: all .5s ease;
+}
+
+.a-btn.active{
+    border: var(--light-sea-green) 2.5px solid;
+    padding: .5% 5%;
+    border-radius: 50px;
+    color: var(--night);
+    font-weight: bold;
+    background-color: var(--amethyst);
+}
+
+
+/* Colores de fuentes */
+.ltrs-clr-1{
+    color: var(--amethyst);
+}
+
+/* contenido */
+
+.grid{
+    display: grid;
+}
+
+.cafe-grid{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+}
+
+.card-cafes{
+    border-radius: 25px;
+    /* border: var(--light-sea-green) 3.5px solid; */
+    aspect-ratio: 4/3;
+}
+
+.img-cafes{    
+    aspect-ratio: 4/3; 
+    object-fit:  cover;
+    object-position: center;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 250px;
+    border-radius: 25px;
+    border: var(--light-sea-green) 3.5px solid;
+}
+
